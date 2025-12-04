@@ -56,7 +56,7 @@ function isInvalidIdPart2NoRegexp(id) {
 }
 
 function isInvalidIdPart1(id) {
-  var s = `${id}`;
+  const s = `${id}`;
   if (s.length % 2 === 1) {
     return false;
   }
