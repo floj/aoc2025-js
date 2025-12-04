@@ -16,19 +16,18 @@ export class BatteryPack {
     let pos = 0;
 
     let remaining = activateCells;
-    while (remaining > 0) {
-      let searchCharge = 9;
+    let searchCharge = 9;
 
-      while (searchCharge > 0 && remaining > 0) {
-        let i = this.indexOf(pos, searchCharge);
-        if (i >= 0 && i <= this.cells.length - remaining) {
-          pos = i + 1;
-          max = max * 10 + searchCharge;
-          remaining--;
-          break;
-        }
-        searchCharge--;
+    while (searchCharge > 0 && remaining > 0) {
+      let i = this.indexOf(pos, searchCharge);
+      if (i >= 0 && i <= this.cells.length - remaining) {
+        pos = i + 1;
+        max = max * 10 + searchCharge;
+        remaining--;
+        searchCharge = 9
+        continue;
       }
+      searchCharge--;
     }
 
     return max;
