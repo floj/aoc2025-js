@@ -24,7 +24,7 @@ export class BatteryPack {
         pos = i + 1;
         max = max * 10 + searchCharge;
         remaining--;
-        searchCharge = 9
+        searchCharge = 9;
         continue;
       }
       searchCharge--;

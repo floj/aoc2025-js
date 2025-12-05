@@ -24,7 +24,7 @@ export class Range {
   combine(other: Range): Range {
     return new Range(
       Math.min(this.start, other.start),
-      Math.max(this.end, other.end)
+      Math.max(this.end, other.end),
     );
   }
 

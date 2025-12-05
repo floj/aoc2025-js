@@ -26,11 +26,10 @@ const neighborOffsets = [
   new Coordinate(1, 1),
 ];
 
-
 export class Cell {
   coordinate: Coordinate;
   symbol: string;
-  grid: Grid
+  grid: Grid;
 
   constructor(coordinate: Coordinate, symbol: string, grid: Grid) {
     this.coordinate = coordinate;
@@ -57,7 +56,6 @@ export class Cell {
   // }
 }
 
-
 export class Grid {
   rows: string[];
   numColumns: number;
@@ -68,7 +66,7 @@ export class Grid {
   }
 
   copy(): Grid {
-    return new Grid([... this.rows]);
+    return new Grid([...this.rows]);
   }
 
   setSymbol(c: Coordinate, symbol: string) {
@@ -77,7 +75,7 @@ export class Grid {
       throw Error("invalid coordinate: " + c);
     }
     const row = this.rows[c.y]!;
-    const symbols = [...row]
+    const symbols = [...row];
     symbols[c.x] = symbol;
     this.rows[c.y] = symbols.join("");
   }

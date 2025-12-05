@@ -50,7 +50,7 @@ for (const line of input) {
     dial.dialRight(clicks);
   }
   console.log(
-    `Direction: ${direction}, Clicks: ${clicks}, Position: ${dial.currentPosition}`
+    `Direction: ${direction}, Clicks: ${clicks}, Position: ${dial.currentPosition}`,
   );
 }
 
