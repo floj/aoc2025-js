@@ -39,7 +39,7 @@ export class Patchbay {
       return 0;
     }
     let sum = 0;
-    for (var o of this.outlets) {
+    for (const o of this.outlets) {
       sum += bays.get(o)!.countPathToDest(dest, bays, via);
     }
     this.cache.set(via.join(","), sum);

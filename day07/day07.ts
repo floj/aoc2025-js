@@ -8,8 +8,8 @@ part1(new Grid(rows));
 part2(new Grid(rows));
 
 function part2(grid: Grid) {
-  var start = grid.findSymbol("S");
-  var timelines = countTimelines(start!, grid, new Map<string, number>());
+  const start = grid.findSymbol("S");
+  const timelines = countTimelines(start!, grid, new Map<string, number>());
   console.log("timelines", timelines);
 }
 
